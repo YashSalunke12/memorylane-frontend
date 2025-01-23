@@ -1,9 +1,28 @@
-import React from 'react'
+import { Button } from "./components/ui/Button";
+import { PlusIcon } from "./icons/PlusIcon";
+import ShareIcon from "./icons/ShareIcon";
 
 const App = () => {
   return (
-    <div className='text-red-600'>App</div>
-  )
-}
+    <>
+      <Button
+        varient="primary"
+        size="md"
+        startIcon={<PlusIcon size="md" />}
+        text="share"
+        onClick={() => {
+          alert("helo");
+        }}
+      />
+      <Button
+        varient="secondary"
+        size="lg"
+        endIcon={<ShareIcon size="lg" />}
+        text="add content"
+        onClick={() => {}}
+      />
+    </>
+  );
+};
 
-export default App
+export default App;
